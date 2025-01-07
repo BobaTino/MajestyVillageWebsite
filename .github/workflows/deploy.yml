@@ -3,26 +3,34 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Trigger deployment when code is pushed to the main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Set up Node.js environment (if your site uses any Node.js build tools)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 16  # Use the version your project requires
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Inject API key
+      # Step 3: Inject API Key into a dynamic file
+      - name: Inject Google Maps API Key
         run: echo "window.env = { GOOGLE_MAPS_API_KEY: '${{ secrets.GOOGLE_MAPS_API_KEY }}' };" > public/env.js
 
-      - name: Build and deploy
-        run: npm run build && npm run deploy
+      # Step 4: Build the site (if applicable)
+      - name: Build the site
+        run: npm run build
+
+      # Step 5: Deploy the site to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Directory to deploy (adjust to your project structure)

@@ -1,0 +1,393 @@
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack text and image */
+    }
+
+    .about-text, .about-image {
+        flex: none; /* Reset flex properties */
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Ensure image scales with container */
+    }
+}
+
+/* Sticky Header */
+header {
+    position: fixed; /* Makes the header stay in place while scrolling */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0;
+    width: 100%; /* Ensures it spans the entire width */
+    z-index: 1000; /* Keeps it on top of other elements */
+    background-color: #fff; /* Adds a background color to prevent overlap issues */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+body {
+    padding-top: 80px; /* Adds space to prevent the header from overlapping content */
+}
+
+
+/* Reset some basic styles */
+body, h1, h2, ul, li, a, button, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* About Section */
+.about {
+    background-color: #9ebae6; /* Blue background */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure the children stretch to the same height */
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 30px; /* Increased margin between title and first paragraph */
+}
+
+.about-text {
+    background-color: white; /* White box for text */
+    padding: 20px; /* Reduce padding to make the text fit more tightly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1; /* Allow it to stretch */
+    color: #333; /* Dark gray text for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+    line-height: 1.6; /* Improve line height for better readability */
+    margin-bottom: 20px;
+    font-size: 18px; /* Adjust font size to make it fit better */
+    max-width: 90%; /* Limit the width to avoid overly wide text */
+    height: 100%; /* Ensure the height stretches to match the image */
+}
+
+.about-image {
+    flex: 1; /* Allow the image to stretch */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures that any overflow is hidden */
+}
+
+.about-image img {
+    width: auto; /* Allow natural width scaling */
+    height: 100%; /* Stretch the image height to fill the container */
+    max-height: 500px; /* Set the max height to avoid excessive stretching */
+    object-fit: cover; /* Ensure the image fills the area while maintaining aspect ratio */
+    object-position: center; /* Focus the center of the image if it gets cropped */
+}
+
+/* Services section styles */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    max-width: 300px;
+    text-align: left;
+}
+
+.service img {
+    width: 100%;
+    height: 350px; /* Adjust this value to make the images longer vertically */
+    object-fit: cover; /* Ensures the images cover the set height and width */
+    border-radius: 5px;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.service ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service ul li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Floor Plan Section */
+.floorplan {
+    background-color: #9ebae6; /* Updated to blue */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.floorplan h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white; /* White text for contrast */
+}
+
+.floorplan-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.floorplan-item {
+    max-width: 300px;
+    text-align: left;
+    background: white; /* Maintain white cards */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.floorplan-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.floorplan-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.floorplan-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contact Info Section */
+.contact {
+    background-color: white; /* Updated to white */
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-map {
+    flex: 0 0 60%;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.contact-details {
+    flex: 0 0 35%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    position: fixed; /* Fix header at the top */
+    width: 100%; /* Full-width header */
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Main content adjustment */
+main {
+    margin-top: 80px; /* Add space equal to header height */
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Terms-specific styling */
+.terms h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.terms h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.terms p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}

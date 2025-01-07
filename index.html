@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majesty Village</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Majesty Village</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#floorplan">Floor Plan</a></li>
+                <li><a href="#contact">Contact Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="asset/MainPageBackground.jpg" alt="Zen Garden with Stones">
+        <div class="overlay">
+            <h2>Where Care Feels Like Home</h2>
+            <button onclick="location.href='#contact'">Book an Appointment</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="asset/AboutUs.jpeg" alt="About Us" />
+            </div>
+            <div class="about-text">
+                <h2>About Our Company</h2>
+                <p>
+                    Welcome to Majesty Village, where we prioritize compassionate care, dignity, 
+                    and a genuine sense of community. Founded with a mission to create a safe and 
+                    enriching enviroment, we have proudly served families with 
+                    a commitment to quality and personalized support.
+                </p>
+                <p>
+                    At Majesty Village, we believe in creating a home where our residents feel 
+                    valued, respected, and empowered to live life fully. Our experienced and 
+                    dedicated staff work closely with residents and their families to offer a 
+                    unique blend of healthcare, personal assistance, and recreational activities 
+                    tailored to each individual’s needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <img src="asset/CustomizedCare.jpg" alt="Customized Care">
+                <h3>Customized Care</h3>
+                <ul>
+                    <li>Restaurant-style Dining</li>
+                    <li>Area with Snacks and Beverages</li>
+                    <li>Daily Tidy Services</li>
+                    <li>Caring, Professional Team</li>
+                </ul>
+            </div>
+            <div class="service">
+                <img src="asset/GreatLiving.jpg" alt="Designed for Great Living">
+                <h3>Designed for Great Living</h3>
+                <ul>
+                    <li>Resident have a choice between share or single room</li>
+                    <li>Beautiful Courtyard with plants and flowers</li>
+                    <li>Multi-Purpose Activity Room and Common Area</li>
+                </ul>
+            </div>
+            <div class="service">
+                <img src="asset/Event.jpg" alt="Exciting Events">
+                <h3>Exciting Events Ahead</h3>
+                <ul>
+                    <li>Monthly Gatherings & Celebrations</li>
+                    <li>Engaging Activities for All Interests</li>
+                    <li>Community Connections</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floor Plan Section -->
+    <section class="floorplan" id="floorplan">
+        <h2>Explore Our Floor Plans</h2>
+        <div class="floorplan-container">
+            <div class="floorplan-item">
+                <img src="asset\MaleResident.png" alt="Male Living Space">
+                <h3>Male Living Space</h3>
+                <p>The male living space is thoughtfully designed with a shared living room for socializing and leisure. 
+                    It includes up to three rooms with flexible accommodation options (single or shared, up to 2 persons per room). A single restroom is centrally located for accessibility, enhancing the convenience of the layout.</p>
+            </div>
+            <div class="floorplan-item">
+                <img src="asset\FemaleResident.png" alt="Female Living Space">
+                <h3>Female Living Space</h3>
+                <p>The female living space features a common area for relaxation and interaction. 
+                    It includes up to seven rooms, with options for single or shared accommodation (up to 2 persons per room). 
+                    Two conveniently located restrooms ensure privacy and comfort for all residents. 
+                    The layout fosters a harmonious balance between personal and shared spaces.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Info</title>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=???"></script>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <!-- Contact Info Section -->
+        <section class="contact" id="contact">
+          <div class="contact-container">
+            <!-- Google Map -->
+            <div class="contact-map">
+              <gmp-map center="33.93944549560547,-117.46530151367188" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="33.93944549560547,-117.46530151367188" title="Our Location"></gmp-advanced-marker>
+              </gmp-map>
+            </div>
+    
+            <!-- Contact Details -->
+            <div class="contact-details">
+              <h3>Contact Us</h3>
+              <p>We are here to help! Get in touch with us through any of the following methods:</p>
+              <ul>
+                <li><strong>Email:</strong> <a href="mailto:info@majestyvillage.com">info@majestyvillage.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></li>
+                <li><strong>Address:</strong> 8595 Philbin Avenue, Riverside, CA 92503</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    
+        <script>
+          // Callback function to initialize the map after the API has loaded
+          function initMap() {
+            console.log("Google Maps API loaded successfully.");
+          }
+        </script>
+      </body>
+    </html>  
+    
+    <footer>
+        <p>&copy; 2024 MajestyVillage. All rights reserved. <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -160,6 +160,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
 
@@ -171,4 +177,3 @@
     script.async = true;
     document.head.appendChild(script);
 </script>
-

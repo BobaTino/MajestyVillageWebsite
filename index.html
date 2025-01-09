@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </header>
-
+    
     <!-- Hero Section -->
     <section class="hero" id="home">
         <img src="asset/MainPageBackground.jpg" alt="Zen Garden with Stones">
@@ -119,7 +119,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Info</title>
-        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcl7CYmYrnUjJ3MsNou_-UsQB-ZzpkLtA&callback=initMap&libraries=maps,marker&v=beta"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=???,marker&v=beta"></script>
         <link rel="stylesheet" href="style.css" />
       </head>
       <body>
@@ -157,23 +157,6 @@
     
     <footer>
         <p>&copy; 2024 MajestyVillage. All rights reserved. <a href="terms.html">Terms & Conditions</a></p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            const menu = document.querySelector('nav ul');
-            menu.classList.toggle('show');
-        });
-    </script>
+    </footer> 
 </body>
 </html>
-
-<script src="env.js"></script>
-<script>
-    const apiKey = window.env.GOOGLE_MAPS_API_KEY;
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
-    script.async = true;
-    document.head.appendChild(script);
-</script>

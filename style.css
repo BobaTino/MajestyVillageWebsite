@@ -21,21 +21,10 @@ header {
     padding: 15px 20px;
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header h1 {
     font-size: 24px;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
 }
 
 header nav ul {
@@ -52,35 +41,6 @@ header nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none; /* Hide menu by default */
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        position: absolute;
-        top: 60px; /* Adjust to your header's height */
-        left: 0;
-        right: 0;
-        z-index: 1000;
-    }
-
-    nav ul.show {
-        display: flex; /* Show the menu when active */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
 }
 
 /* Main content adjustment */
@@ -360,29 +320,70 @@ footer {
 
 @media (max-width: 768px) {
     /* Header adjustments */
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none; /* Hide menu by default */
+    header nav ul {
         flex-direction: column;
         align-items: center;
         padding: 10px 0;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        position: absolute;
-        top: 60px; /* Adjust to your header's height */
-        left: 0;
-        right: 0;
-        z-index: 1000;
     }
 
-    nav ul.show {
-        display: flex; /* Show the menu when active */
-    }
-
-    nav ul li {
+    header nav ul li {
         margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero .overlay h2 {
+        font-size: 24px;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column; /* Stack text and image */
+        gap: 20px;
+    }
+
+    .about-text, .about-image {
+        flex: none; /* Reset flex properties */
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Ensure image scales with container */
+    }
+
+    /* Services Section */
+    .service-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service {
+        max-width: 100%;
+    }
+
+    /* Floor Plan Section */
+    .floorplan-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-map {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .contact-details {
+        width: 100%;
+        padding: 15px;
     }
 }

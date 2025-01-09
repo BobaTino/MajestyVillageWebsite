@@ -1,56 +1,26 @@
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack text and image */
-    }
-
-    .about-text, .about-image {
-        flex: none; /* Reset flex properties */
-        max-width: 100%; /* Full width on small screens */
-    }
-
-    .about-image img {
-        max-width: 100%; /* Ensure image scales with container */
-    }
-}
-
-/* Sticky Header */
-header {
-    position: fixed; /* Makes the header stay in place while scrolling */
-    top: 0; /* Aligns it to the top of the viewport */
-    left: 0;
-    width: 100%; /* Ensures it spans the entire width */
-    z-index: 1000; /* Keeps it on top of other elements */
-    background-color: #fff; /* Adds a background color to prevent overlap issues */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-}
-
-body {
-    padding-top: 80px; /* Adds space to prevent the header from overlapping content */
-}
-
-
-/* Reset some basic styles */
-body, h1, h2, ul, li, a, button, p {
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General styles */
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
-/* Header styles */
+/* Header Styling */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    position: fixed; /* Fix header at the top */
+    width: 100%; /* Full-width header */
     background-color: #fff;
     border-bottom: 1px solid #ccc;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -58,18 +28,58 @@ header h1 {
 }
 
 header nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin-left: 15px;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+}
+
+/* Main content adjustment */
+main {
+    margin-top: 80px; /* Add space equal to header height */
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Terms-specific styling */
+.terms h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.terms h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.terms p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
 }
 
 /* Hero section styles */
@@ -308,86 +318,72 @@ header nav ul li a {
     margin-bottom: 8px;
 }
 
-/* General Reset */
-body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
 
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+    header nav ul li {
+        margin: 10px 0;
+    }
 
-/* Header Styling */
-header {
-    position: fixed; /* Fix header at the top */
-    width: 100%; /* Full-width header */
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-    padding: 15px 20px;
-    z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+    /* Hero Section */
+    .hero .overlay h2 {
+        font-size: 24px;
+    }
 
-header h1 {
-    font-size: 24px;
-}
+    .hero button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-}
+    /* About Section */
+    .about-container {
+        flex-direction: column; /* Stack text and image */
+        gap: 20px;
+    }
 
-header nav ul li {
-    margin-left: 15px;
-}
+    .about-text, .about-image {
+        flex: none; /* Reset flex properties */
+        max-width: 100%; /* Full width on small screens */
+    }
 
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
+    .about-image img {
+        max-width: 100%; /* Ensure image scales with container */
+    }
 
-/* Main content adjustment */
-main {
-    margin-top: 80px; /* Add space equal to header height */
-    padding: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+    /* Services Section */
+    .service-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-/* Terms-specific styling */
-.terms h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
+    .service {
+        max-width: 100%;
+    }
 
-.terms h3 {
-    font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+    /* Floor Plan Section */
+    .floorplan-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.terms p {
-    margin-bottom: 15px;
-    font-size: 18px;
-    line-height: 1.8;
-}
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 30px;
+    .contact-map {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .contact-details {
+        width: 100%;
+        padding: 15px;
+    }
 }

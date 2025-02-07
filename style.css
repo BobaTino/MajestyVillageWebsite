@@ -12,6 +12,10 @@ body {
     color: #333;
 }
 
+.example::-webkit-scrollbar {
+    display: none;
+}
+
 /* Header Styling */
 header {
     position: fixed; /* Fix header at the top */
@@ -390,30 +394,35 @@ footer {
 
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Hidden by default on larger screens */
+    display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px; /* Reduced padding */
-    position: absolute;
+    padding: 5px;
+    position: fixed; /* Keep it fixed at the top */
     top: 15px;
-    right: 20px; /* Moves the icon to the right */
-    z-index: 1100; /* Ensures it's above other elements */
+    right: 20px; /* Move it to the right */
+    z-index: 1101; /* Higher than the menu */
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 /* Smaller Hamburger Bars */
 .hamburger .bar {
-    width: 20px; /* Reduced width */
-    height: 2px; /* Reduced thickness */
+    width: 20px;
+    height: 2px;
     background-color: #333;
     margin: 3px 0;
     transition: 0.4s;
 }
+
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: flex-end;
     list-style: none;
+    padding-right: 50px;
 }
 
 /* Close Button for Mobile Navigation */
@@ -426,6 +435,7 @@ footer {
     color: white;
     border: none;
     padding: 5px 10px;
+    padding-right: 20px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 5px;

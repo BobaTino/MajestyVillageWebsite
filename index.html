@@ -11,7 +11,14 @@
     <header>
         <h1>Majesty Village</h1>
         <nav>
-            <ul>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
@@ -158,5 +165,13 @@
     <footer>
         <p>&copy; 2024 MajestyVillage. All rights reserved. <a href="terms.html">Terms & Conditions</a></p>
     </footer> 
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }        
+    </script>
 </body>
 </html>
+
